@@ -15,6 +15,7 @@ export GKE_CLUSTER_NAME="gke-crossplane-cluster-f"
 export GKE_NETWORK="gitops-vpc"
 export GKE_SUBNETWORK="gitops-subnet1"
 
+export GKE_NODEPOOL="gke-crossplane-np-f"
 
 # Set environment vars for Crossplane installation
 export CROSSPLANE_VERSION="1.2.0"
