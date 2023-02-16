@@ -4,9 +4,6 @@
 #Create configure the Crossplane GCP Provider
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
-substitutions:
-  _HELM_VERSION: 3.7.0
-  PROJECT_ID: gitops-vittal
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     env:
