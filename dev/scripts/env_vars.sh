@@ -3,6 +3,8 @@
 
 # Set environement variables for Google Cloud
 
+# chmod +x ../../gcp_service_account_keyfile
+
 export GCP_PROJECT_ID="gitops-vittal"
 export GCP_SERVICE_ACCOUNT_NAME="gitops-cloudbuild-gke@gitops-vittal.iam.gserviceaccount.com"
 export GCP_SERVICE_ACCOUNT_KEYFILE="../../gcp_service_account_keyfile"
