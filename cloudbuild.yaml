@@ -14,6 +14,8 @@ steps:
       echo "gcp_config executed"
       
   - name: 'gcr.io/cloud-builders/kubectl'
+    env:
+  - 'KUBECONFIG=/workspace/.kube/config'
     entrypoint: 'bash'
     args: 
     - '-c'
