@@ -1,4 +1,5 @@
 # Set environement variables for Google Cloud
+
 export GCP_PROJECT_ID="gitops-vittal"
 export GCP_SERVICE_ACCOUNT_NAME="gitops-cloudbuild-gke@gitops-vittal.iam.gserviceaccount.com"
 export GCP_SERVICE_ACCOUNT_KEYFILE="/crossplane-gitops/GCP_SERVICE_ACCOUNT_KEYFILE"
@@ -13,4 +14,4 @@ export CROSSPLANE_VERSION="1.2.0"
 export CROSSPLANE_NS="crossplane-system"
 
 
-#Cloud SQL Databse
+#Cloud SQL Databse (WIP)
