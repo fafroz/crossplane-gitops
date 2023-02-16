@@ -16,13 +16,19 @@
 # options:
 #   logging: CLOUD_LOGGING_ONLY
 
+# steps:
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - | 
+#           chmod +x /dev/scripts/gcp_config.sh 
+#           ./dev/scripts/gcp_config.sh
+# # timeout: 1000s
+# options:
+#   logging: CLOUD_LOGGING_ONLY
+
 steps:
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - | 
-          chmod +x /dev/scripts/gcp_config.sh 
-          ./dev/scripts/gcp_config.sh
-# timeout: 1000s
+  - name: 'bash'
+    args: ['./dev/scripts/gcp_config.sh']
 options:
   logging: CLOUD_LOGGING_ONLY
