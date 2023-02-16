@@ -28,6 +28,7 @@ steps:
 tags: ['cloud-builders-community']
 substitutions:
   _HELM_VERSION: 3.7.0
+  PROJECT_ID: gitops-vittal
     entrypoint: 'bash'
     args: 
     - '-c'
