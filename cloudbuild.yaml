@@ -10,7 +10,7 @@
 # sh dev/scripts/create_gke_cluster.sh
 
 steps:
-  - name: 'shell script'
+  - name: 'bash'
     entrypoint: ‘sh’
     args: ['./dev/scripts/gcp-gcp_config.sh']
 options:
