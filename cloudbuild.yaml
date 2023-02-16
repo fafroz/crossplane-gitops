@@ -12,16 +12,16 @@ steps:
       cd dev/scripts
       chmod +x gcp_config.sh
       echo "permission given"
-      sh gcp_config.sh
+      ./gcp_config.sh
       echo "gcp_config executed"
       chmod +x install_crossplane.sh
-      sh install_crossplane.sh
+      ./install_crossplane.sh
       echo "install_crossplane executed"
       chmod +x configure_gcp_provider.sh
-      sh configure_gcp_provider.sh
+      ./configure_gcp_provider.sh
       echo "configure_gcp_provider executed"
       chmod +x create_gke_cluster.sh
-      sh create_gke_cluster.sh
+      ./create_gke_cluster.sh
       echo "cluster created"
 timeout: 1000s     
 options:
