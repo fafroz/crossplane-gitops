@@ -1,11 +1,12 @@
 #!/bin/bash
 
-sh dev/scripts/env_vars.sh
+#sh dev/scripts/env_vars.sh
+. ./dev/scripts/env_vars.sh
 
 # Use envsubst to replace env var values in the cluster-template YAML template file
 envsubst \
-    < crossplane/cluster-template.yml \
-    > crossplane/cluster.yml
+    < dev/crossplane/cluster-template.yml \
+    > dev/crossplane/cluster.yml
 
 # Configure the cluster yml and install the GKE cluster
-kubectl apply -f crossplane/cluster.yml
+kubectl apply -f dev/crossplane/cluster.yml
