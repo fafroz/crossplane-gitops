@@ -11,6 +11,6 @@
 
 steps:
   - name: 'bash'
-    args: ['./dev/scripts/gcp_config.sh']
+    args: ['chmod +x ./dev/scripts/gcp_config.sh']
 options:
   logging: CLOUD_LOGGING_ONLY
