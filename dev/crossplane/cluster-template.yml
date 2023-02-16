@@ -66,7 +66,8 @@ spec:
         - "https://www.googleapis.com/auth/service.management.readonly"
         - "https://www.googleapis.com/auth/trace.append"
     initialNodeCount: 2
-    locations: ${GKE_CLUSTER_ZONE}
+    locations: 
+      - ${GKE_CLUSTER_ZONE}
     management:
       autoRepair: true
       autoUpgrade: true
