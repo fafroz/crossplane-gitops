@@ -4,7 +4,12 @@
 #Create configure the Crossplane GCP Provider
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
-sh dev/scripts/gcp_config.sh
-sh dev/scripts/install_crossplane.sh
-sh dev/scripts/configure_gcp_provider.sh
-sh dev/scripts/create_gke_cluster.sh
+# sh dev/scripts/gcp_config.sh
+# sh dev/scripts/install_crossplane.sh
+# sh dev/scripts/configure_gcp_provider.sh
+# sh dev/scripts/create_gke_cluster.sh
+
+steps:
+  - name: 'shell script'
+    entrypoint: ‘sh’
+    args: ['./dev/scripts/gcp-gcp_config.sh']
