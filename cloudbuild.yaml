@@ -4,36 +4,6 @@
 #Create configure the Crossplane GCP Provider
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
-# sh dev/scripts/gcp_config.sh
-# sh dev/scripts/install_crossplane.sh
-# sh dev/scripts/configure_gcp_provider.sh
-# sh dev/scripts/create_gke_cluster.sh
-
-# steps:
-#   - name: 'bash'
-#     args: ['chmod +x /dev/scripts/gcp_config.sh']
-#     - 
-# options:
-#   logging: CLOUD_LOGGING_ONLY
-
-# steps:
-#   entrypoint: 'bash'
-#   args:
-#     - '-c'
-#     - | 
-#           chmod +x /dev/scripts/gcp_config.sh 
-#           ./dev/scripts/gcp_config.sh
-# # timeout: 1000s
-# options:
-#   logging: CLOUD_LOGGING_ONLY
-
-# steps:
-#   - name: 'bash'
-#     args: ['./dev/scripts/gcp_config.sh']
-# options:
-#   logging: CLOUD_LOGGING_ONLY
-
-
 steps:
   - name: 'bash'
     args: 
@@ -41,6 +11,14 @@ steps:
     - |
       cd dev/scripts
       chmod +x ./gcp_config.sh
+      echo "gcp_config executed"
+      chmod +x ./install_crossplane.sh
+      echo "install_crossplane executed"
+      chmod +x ./configure_gcp_provider.sh
+      echo "configure_gcp_provider executed"
+      chmod +x ./create_gke_cluster.sh
+      echo "cluster created"
+timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
 
