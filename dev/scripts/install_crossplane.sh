@@ -1,7 +1,6 @@
-
 #!/bin/bash
 
-. ./scripts/env_vars.sh
+sh dev/scripts/env_vars.sh
 
 # Install Crossplane
 kubectl create namespace $CROSSPLANE_NS
