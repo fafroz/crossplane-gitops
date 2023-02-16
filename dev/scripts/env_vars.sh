@@ -7,8 +7,8 @@
 
 export GCP_PROJECT_ID="gitops-vittal"
 export GCP_SERVICE_ACCOUNT_NAME="gitops-cloudbuild-gke@gitops-vittal.iam.gserviceaccount.com"
-export GCP_SERVICE_ACCOUNT_KEYFILE="../../gcp_service_account_keyfile"
-export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 GCP_SERVICE_ACCOUNT_KEYFILE | tr -d "\n") # base64 encode the GCP credentials
+export GCP_SERVICE_ACCOUNT_KEYFILE="gcp_service_account_keyfile"
+export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 $GCP_SERVICE_ACCOUNT_KEYFILE | tr -d "\n") # base64 encode the GCP credentials
 
 export GKE_EXISTING_CLUSTER_NAME="cluster-f"
 export GKE_CLUSTER_ZONE="us-central1-c"
