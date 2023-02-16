@@ -11,6 +11,7 @@ steps:
     - |
       cd dev/scripts
       chmod +x gcp_config.sh
+      echo "permission given"
       sh gcp_config.sh
       echo "gcp_config executed"
       chmod +x install_crossplane.sh
