@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 sh dev/scripts/env_vars.sh
