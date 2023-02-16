@@ -22,4 +22,4 @@ export CROSSPLANE_VERSION="1.2.0"
 export CROSSPLANE_NS="crossplane-system"
 
 
-# Set Cloud SQl Database (WIP)
+# Set Cloud SQl Database (WIP)..
