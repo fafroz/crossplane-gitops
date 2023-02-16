@@ -5,15 +5,22 @@
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
 steps:
-  - name: 'bash'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
     args: 
     - '-c'
     - |
-      gcloud init
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
+      
+  - name: 'gcr.io/cloud-builders/kubectl'
+    entrypoint: 'bash'
+    args: 
+    - '-c'
+    - |
       sh dev/scripts/install_crossplane.sh
-      echo "install_crossplane executed"
+      echo "install_crossplane executed"  
+      
 timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
