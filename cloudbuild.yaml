@@ -9,8 +9,20 @@
 # sh dev/scripts/configure_gcp_provider.sh
 # sh dev/scripts/create_gke_cluster.sh
 
+# steps:
+#   - name: 'bash'
+#     args: ['chmod +x /dev/scripts/gcp_config.sh']
+#     - 
+# options:
+#   logging: CLOUD_LOGGING_ONLY
+
 steps:
-  - name: 'bash'
-    args: ['chmod +x ./dev/scripts/gcp_config.sh']
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - | 
+          chmod +x /dev/scripts/gcp_config.sh 
+          ./dev/scripts/gcp_config.sh
+timeout: 1000s
 options:
   logging: CLOUD_LOGGING_ONLY
