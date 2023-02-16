@@ -21,7 +21,7 @@ steps:
   args:
     - '-c'
     - | 
-          chmod +x /workspace/dev/scripts/gcp_config.sh 
+          chmod +x /dev/scripts/gcp_config.sh 
 #           ./dev/scripts/gcp_config.sh
 # timeout: 1000s
 options:
