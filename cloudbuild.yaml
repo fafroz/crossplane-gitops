@@ -18,7 +18,7 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-  steps:
+steps:
   - name: 'gcr.io/cloud-builders/helm'
     entrypoint: 'bash'
     args: 
