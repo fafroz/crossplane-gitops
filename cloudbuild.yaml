@@ -13,7 +13,7 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-  - name: 'gcr.io/cloud-builders/kubectl'
+  - name: 'gcr.io/cloud-builders/helm'
     entrypoint: 'bash'
     args: 
     - '-c'
