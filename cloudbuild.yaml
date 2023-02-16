@@ -1,1 +1,10 @@
+# Run the following script files to:
 
+#Install Crossplane on an existing Kubernetes cluster in Google Cloude
+#Create configure the Crossplane GCP Provider
+#Provision a new GKE Cluster and Node Pool using Crossplane
+
+./crossplane-gitops/dev/scripts/gcp_config.sh
+./crossplane-gitops/dev/scripts/install_crossplane.sh
+./crossplane-gitops/dev/scripts/configure_gcp_provider.sh
+./crossplane-gitops/dev/create_gke_cluster.sh
