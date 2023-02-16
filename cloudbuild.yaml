@@ -15,18 +15,16 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-      sh dev/scripts/install_crossplane.sh
-      echo "install_crossplane executed"
-      
-#   - name: 'gcr.io/cloud-builders/kubectl'
-#     env:
-#       - 'KUBECONFIG=/workspace/.kube/config'
-#     entrypoint: 'bash'
-#     args: 
-#     - '-c'
-#     - |
 #       sh dev/scripts/install_crossplane.sh
-#       echo "install_crossplane executed"  
+#       echo "install_crossplane executed"
+      
+  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'
+    entrypoint: 'bash'
+    args: 
+    - '-c'
+    - |
+      sh dev/scripts/install_crossplane.sh
+      echo "install_crossplane executed"  
       
 timeout: 1000s     
 options:
