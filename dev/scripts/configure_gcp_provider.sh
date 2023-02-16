@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-. ./scripts/env_vars.sh
+chmod +x . ./scripts/env_vars.sh
 
 # Install the GCP Provider on Crossplane
 kubectl apply -f crossplane/provider-gcp.yml
