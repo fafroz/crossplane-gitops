@@ -6,5 +6,5 @@
 
 sh dev/scripts/gcp_config.sh
 sh dev/scripts/install_crossplane.sh
-sh dev/dev/scripts/configure_gcp_provider.sh
-sh dev/dev/create_gke_cluster.sh
+sh dev/scripts/configure_gcp_provider.sh
+sh dev/scripts/create_gke_cluster.sh
