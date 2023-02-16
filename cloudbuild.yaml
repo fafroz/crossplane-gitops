@@ -18,20 +18,14 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-#       sh dev/scripts/install_crossplane.sh
-#       echo "install_crossplane executed"
-  
-  - name: 'gcr.io/$PROJECT_ID/helm'
- images:
-  - 'gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}'
-  - 'gcr.io/$PROJECT_ID/helm:latest'
-tags: ['cloud-builders-community']
+  steps:
+  - name: 'gcr.io/cloud-builders/helm'
     entrypoint: 'bash'
     args: 
     - '-c'
     - |
       sh dev/scripts/install_crossplane.sh
-      echo "install_crossplane executed"  
+      echo "install_crossplane executed"
       
 timeout: 1000s     
 options:
