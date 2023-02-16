@@ -9,10 +9,11 @@ steps:
     args: 
     - '-c'
     - |
+      gcloud init
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       sh dev/scripts/install_crossplane.sh
-      ./install_crossplane.sh
+      echo "install_crossplane executed"
 timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
