@@ -16,7 +16,7 @@ steps:
       echo "gcp_config executed"
       
 steps:
-  - name: 'gcr.io/cloud-builders/helm'
+  - name: 'gcr.io/cloud-builders/kubectl'
     entrypoint: 'bash'
     args: 
     - '-c'
