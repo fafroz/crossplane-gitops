@@ -21,7 +21,7 @@ steps:
 #       sh dev/scripts/install_crossplane.sh
 #       echo "install_crossplane executed"
   
-  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'
+  - name: 'gcr.io/$PROJECT_ID/helm'
  images:
   - 'gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}'
   - 'gcr.io/$PROJECT_ID/helm:latest'
