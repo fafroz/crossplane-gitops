@@ -12,7 +12,7 @@ steps:
       cd dev/scripts
       chmod +x gcp_config.sh
       echo "permission given"
-      ./gcp_config.sh
+      ./dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       chmod +x install_crossplane.sh
       ./install_crossplane.sh
