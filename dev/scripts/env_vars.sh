@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Set environement variables for Google Cloud
