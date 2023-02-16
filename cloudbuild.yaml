@@ -11,6 +11,6 @@
 
 steps:
   - name: 'bash'
-    args: ['./dev/scripts/gcp-gcp_config.sh']
+    args: ['./dev/scripts/gcp_config.sh']
 options:
   logging: CLOUD_LOGGING_ONLY
