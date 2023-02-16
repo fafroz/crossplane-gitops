@@ -1,6 +1,6 @@
 #!/bin/bash
 
-../../dev/scripts/env_vars.sh
+sh ../../dev/scripts/env_vars.sh
 
 # Use envsubst to replace env var values in the cluster-template YAML template file
 envsubst \
