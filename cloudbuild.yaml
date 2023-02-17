@@ -15,11 +15,14 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-#   - name: 'gcr.io/cloud-builders/kubectl'
-#     entrypoint: 'bash'
-#     args: 
-#     - '-c'
-#     - |
+  - name: 'gcr.io/cloud-builders/kubectl'
+    entrypoint: 'bash'
+    args: 
+    - '-c'
+    - |
+      sh dev/scripts/install_crossplane.sh
+      echo "install_crossplane executed"
+
 #   - name: 'gcr.io/cloud-builders/docker'
 #     args: ['build', '--tag=gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}', '--tag=gcr.io/$PROJECT_ID/helm:latest', '--build-arg', 'HELM_VERSION=v${_HELM_VERSION}', '.']
 # # Sanity Check: make sure basic functionality works
@@ -31,12 +34,9 @@ steps:
 # tags: ['cloud-builders-community']
 # substitutions:
 #   _HELM_VERSION: 3.7.0
-  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'  
-    args: ['upgrade', '--install', 'filebeat', '--namespace', 'filebeat', 'stable/filebeat']
-    
-      sh dev/scripts/install_crossplane.sh
-      echo "install_crossplane executed"
-      
+#   - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'  
+#     args: ['upgrade', '--install', 'filebeat', '--namespace', 'filebeat', 'stable/filebeat']
+
 timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
