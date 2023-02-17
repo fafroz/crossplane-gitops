@@ -15,17 +15,16 @@ steps:
       sh dev/scripts/gcp_config.sh
       echo "gcp_config executed"
       
-steps:
 #   - name: 'gcr.io/cloud-builders/kubectl'
 #     entrypoint: 'bash'
 #     args: 
 #     - '-c'
 #     - |
-    - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}', '--tag=gcr.io/$PROJECT_ID/helm:latest', '--build-arg', 'HELM_VERSION=v${_HELM_VERSION}', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '--tag=gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}', '--tag=gcr.io/$PROJECT_ID/helm:latest', '--build-arg', 'HELM_VERSION=v${_HELM_VERSION}', '.']
 # Sanity Check: make sure basic functionality works
-- name: 'gcr.io/$PROJECT_ID/helm:latest'
-  args: ['version', '--client']
+  - name: 'gcr.io/$PROJECT_ID/helm:latest'
+    args: ['version', '--client']
 images:
   - 'gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}'
   - 'gcr.io/$PROJECT_ID/helm:latest'
