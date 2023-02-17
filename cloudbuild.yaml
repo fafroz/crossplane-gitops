@@ -31,7 +31,8 @@ steps:
 # tags: ['cloud-builders-community']
 # substitutions:
 #   _HELM_VERSION: 3.7.0
-  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'  args: ['upgrade', '--install', 'filebeat', '--namespace', 'filebeat', 'stable/filebeat']
+  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'  
+    args: ['upgrade', '--install', 'filebeat', '--namespace', 'filebeat', 'stable/filebeat']
     
       sh dev/scripts/install_crossplane.sh
       echo "install_crossplane executed"
