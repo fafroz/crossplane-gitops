@@ -17,7 +17,7 @@ steps:
       echo "gcp_config executed"
       echo "switched.. `pwd`"
       
-  - name: 'gcr.io/cloud-builders/helm'
+  - name: 'gcr.io/gitops-vittal/helm'
     entrypoint: 'bash'
     args: 
     - '-c'
