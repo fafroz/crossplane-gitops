@@ -23,13 +23,13 @@ steps:
     - |
       sh dev/scripts/create_helm_builder.sh
       
-  - name: 'gcr.io/gitops-vittal/helm'
-    entrypoint: 'bash'
-    args: 
-    - '-c'
-    - |
-      sh dev/scripts/install_crossplane.sh
-      echo "install_crossplane executed"
+#   - name: 'gcr.io/gitops-vittal/helm'
+#     entrypoint: 'bash'
+#     args: 
+#     - '-c'
+#     - |
+#       sh dev/scripts/install_crossplane.sh
+#       echo "install_crossplane executed"
 
 #   - name: 'gcr.io/cloud-builders/docker'
 #     args: ['build', '--tag=gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}', '--tag=gcr.io/$PROJECT_ID/helm:latest', '--build-arg', 'HELM_VERSION=v${_HELM_VERSION}', '.']
