@@ -13,10 +13,11 @@ steps:
     - '-c'
     - |
       sh dev/scripts/gcp_config.sh
+      sh dev/scripts/create_helm_builder.sh
       echo "gcp_config executed"
       echo "switched.. `pwd`"
       
-  - name: 'gcr.io/cloud-builders/kubectl'
+  - name: 'gcr.io/cloud-builders/helm'
     entrypoint: 'bash'
     args: 
     - '-c'
