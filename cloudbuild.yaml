@@ -13,9 +13,15 @@ steps:
     - '-c'
     - |
       sh dev/scripts/gcp_config.sh
-      sh dev/scripts/create_helm_builder.sh
       echo "gcp_config executed"
       echo "switched.. `pwd`"
+      
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: 
+    - '-c'
+    - |
+      sh dev/scripts/create_helm_builder.sh
       
   - name: 'gcr.io/gitops-vittal/helm'
     entrypoint: 'bash'
