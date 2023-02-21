@@ -4,3 +4,4 @@ GOOGLE_CLOUD_PROJECT=gitops-vittal
 GCR_HELM=us-central1-docker.pkg.dev/gitops-vittal/helm
 docker build -t $GCR_HELM
 docker push $GCR_HELM
+
