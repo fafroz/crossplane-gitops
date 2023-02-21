@@ -17,11 +17,9 @@ steps:
       echo "switched.. `pwd`"
       
   - name: 'gcr.io/cloud-builders/docker'
-    entrypoint: 'bash'
-    args: 
-    - '-c'
-    - |
-      sh dev/scripts/create_helm_builder.sh
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/gitops-vittal/helm/helm-image:tag1', '.' ]
+  images:- 'us-central1-docker.pkg.dev/gitops-vittal/helm/helm-image:tag1'
+   
       
 #   - name: 'gcr.io/gitops-vittal/helm'
 #     entrypoint: 'bash'
