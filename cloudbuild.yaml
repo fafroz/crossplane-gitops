@@ -13,36 +13,9 @@ steps:
     - '-c'
     - |
       sh dev/scripts/gcp_config.sh
-      echo "gcp_config executed"
-      echo "switched.. `pwd`"
-      
-  - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'us-central1-docker.pkg.dev/gitops-vittal/helm/helm-image:tag1', '.' ]
-  images:- 'us-central1-docker.pkg.dev/gitops-vittal/helm/helm-image:tag1'
-   
-      
-#   - name: 'gcr.io/gitops-vittal/helm'
-#     entrypoint: 'bash'
-#     args: 
-#     - '-c'
-#     - |
-#       sh dev/scripts/install_crossplane.sh
-#       echo "install_crossplane executed"
-
-#   - name: 'gcr.io/cloud-builders/docker'
-#     args: ['build', '--tag=gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}', '--tag=gcr.io/$PROJECT_ID/helm:latest', '--build-arg', 'HELM_VERSION=v${_HELM_VERSION}', '.']
-# # Sanity Check: make sure basic functionality works
-#   - name: 'gcr.io/$PROJECT_ID/helm:latest'
-#     args: ['version', '--client']
-# images:
-#   - 'gcr.io/$PROJECT_ID/helm:${_HELM_VERSION}'
-#   - 'gcr.io/$PROJECT_ID/helm:latest'
-# tags: ['cloud-builders-community']
-# substitutions:
-#   _HELM_VERSION: 3.7.0
-#   - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'  
-#     args: ['upgrade', '--install', 'filebeat', '--namespace', 'filebeat', 'stable/filebeat']
-
+      sh dev/scripts/create_gke_cluster.sh
+      echo "cluster created"
+      #echo "switched.. `pwd`"
 timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
