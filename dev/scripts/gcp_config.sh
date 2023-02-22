@@ -12,4 +12,4 @@ sh dev/scripts/env_vars.sh
 echo N | gcloud config set project $GCP_PROJECT_ID 
 
 # Connect to cluster (also sets current context)
-gcloud container clusters get-credentials $GKE_EXISTING_CLUSTER_NAME --zone $GKE_CLUSTER_ZONE --project $GCP_PROJECT_ID
+gcloud container clusters get-credentials $GKE_HOST_CLUSTER_NAME --zone $GKE_HOST_CLUSTER_ZONE --project $GCP_PROJECT_ID
