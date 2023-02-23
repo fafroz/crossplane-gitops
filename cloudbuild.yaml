@@ -21,10 +21,10 @@ steps:
   # Configure a kubectl workspace for this project
   - name: gcr.io/cloud-builders/kubectl
     args:
-      - cluster-info
-    env:
-      - KUBECONFIG=/workspace/.kube/config
-   
+    - '-c'
+    - |
+      echo "kubectl"
+      
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
     args: 
