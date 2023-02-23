@@ -52,6 +52,6 @@ export CROSSPLANE_NS="crossplane-system"
 export GKE_CLUSTER_NAME="customer-gke-k8scluster"
 export GKE_NETWORK="gitops-vpc"
 export GKE_SUBNETWORK="gitops-subnet1"
-export GKE_NODEPOOL="gke-crossplane-np-f"
+export GKE_NODEPOOL="customer-gke-np"
 
 # Set Cloud SQl Database (WIP)..
