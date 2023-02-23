@@ -17,7 +17,8 @@ steps:
 #       sh dev/scripts/create_gke_cluster.sh
 #       echo "cluster created"
 #       #echo "switched.. `pwd`"
-      
+   
+   
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
     args: 
