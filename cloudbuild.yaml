@@ -16,6 +16,7 @@ steps:
     args:
     - '-c'
     - |
+      sh dev/scripts/gcp_config.sh
       sh dev/scripts/create_gke_cluster.sh
       echo "Customer cluster provisioned"  
 timeout: 1000s     
