@@ -20,6 +20,8 @@ steps:
    
    
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
+    env:
+      - 'KUBECONFIG=/workspace/.kube/config'
     entrypoint: 'bash'
     args: 
     - '-c'
