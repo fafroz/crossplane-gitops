@@ -9,8 +9,9 @@ steps:
       gcloud container clusters get-credentials mgcp-host-crossplane-k8scluster --zone us-central1-c --project gitops-vittal  
       
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
-    args: ['dev/crossplane/cluster-template.yml']
-     args:
+    entrypoint: 'bash'
+    #args: ['dev/crossplane/cluster-template.yml']
+    args:
     - '-c'
     - |
       sh dev/scripts/create_gke_cluster.sh
