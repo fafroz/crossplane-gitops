@@ -1,25 +1,14 @@
-# Run the following script files to:
-
-#Install Crossplane on an existing Kubernetes cluster in Google Cloude
-#Create configure the Crossplane GCP Provider
-#Provision a new GKE Cluster and Node Pool using Crossplane
-
 substitutions:
   _PROJECT_ID: gitops-vittal
 steps:   
-  - name: 'gcr.io/$_PROJECT_ID/envsubst'
-    env: ["PLANET=Mars"]
-    args: ["message.txt"]
-      
-  # Configure a kubectl workspace for this project
-  - name: gcr.io/cloud-builders/kubectl
-    env:
-      - 'KUBECTL_VERSION=1.26'
+  - name: gcr.io/cloud-builders/gcloud
+#     env:
+#       - 'KUBECTL_VERSION=1.26'
     entrypoint: 'bash' 
     args:
     - '-c'
     - |
-      #sh dev/scripts/gcp_config.sh
+      gcloud container clusters get-credentials mgcp-host-crossplane-k8scluster --zone us-central1-c --project gitops-vittal
       sh dev/scripts/create_gke_cluster.sh
       echo "Customer cluster provisioned"  
 timeout: 1000s     
