@@ -18,7 +18,7 @@ steps:
 #       echo "cluster created"
 #       #echo "switched.. `pwd`"
    
-   - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/gcloud'
     env:
       - 'KUBECONFIG=/workspace/.kube/config'
    
