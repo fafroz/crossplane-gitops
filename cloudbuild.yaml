@@ -10,7 +10,7 @@ steps:
       
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
-    args: ['dev/crossplane/cluster-template.yml']
+#     args: ['dev/crossplane/cluster-template.yml']
     
   - name: 'gcr.io/cloud-builders/kubectl'
     entrypoint: 'bash'
