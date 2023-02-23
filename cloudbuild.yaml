@@ -5,7 +5,7 @@
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
 substitutions:
-  PROJECT-ID: gitops-vittal
+  _PROJECT_ID: gitops-vittal
 steps:
 #   - name: 'gcr.io/cloud-builders/gcloud'
 #     env:
@@ -18,7 +18,7 @@ steps:
 #       echo "cluster created"
 #       #echo "switched.. `pwd`"
       
-  - name: 'gcr.io/gitops-vittal/envsubst'
+  - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
     args: 
     - '-c'
