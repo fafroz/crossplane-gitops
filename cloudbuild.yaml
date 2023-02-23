@@ -1,9 +1,10 @@
 substitutions:
   _PROJECT_ID: gitops-vittal
 steps:   
+  - name: 'gcr.io/$PROJECT_ID/envsubst'
+    args: ['dev/crossplane/cluster-template.yml']
+    
   - name: gcr.io/cloud-builders/gcloud
-#     env:
-#       - 'KUBECTL_VERSION=1.26'
     entrypoint: 'bash' 
     args:
     - '-c'
