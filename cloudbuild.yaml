@@ -13,10 +13,13 @@ steps:
       
   # Configure a kubectl workspace for this project
   - name: gcr.io/cloud-builders/kubectl
+    env:
+      - 'KUBECTL_VERSION=1.26'
+    entrypoint: 'bash' 
     args:
     - '-c'
     - |
-      sh dev/scripts/gcp_config.sh
+      #sh dev/scripts/gcp_config.sh
       sh dev/scripts/create_gke_cluster.sh
       echo "Customer cluster provisioned"  
 timeout: 1000s     
