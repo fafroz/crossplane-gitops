@@ -9,7 +9,7 @@ substitutions:
 steps:   
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
     env: ["PLANET=Mars"]
-    args:["message.txt"]
+    args: ["message.txt"]
       
   # Configure a kubectl workspace for this project
   - name: gcr.io/cloud-builders/kubectl
