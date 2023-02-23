@@ -49,7 +49,7 @@ export CROSSPLANE_NS="crossplane-system"
 
 
 #customer_env_var
-export GKE_CLUSTER_NAME="gke-k8scluster"
+export GKE_CLUSTER_NAME="gke-crossplane-cluster-fc"
 export GKE_NETWORK="gitops-vpc"
 export GKE_SUBNETWORK="gitops-subnet1"
 export GKE_NODEPOOL="gke-crossplane-np-f"
