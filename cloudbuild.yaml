@@ -1,7 +1,7 @@
 substitutions:
   _PROJECT_ID: gitops-vittal
 steps:   
-  - name: 'gcr.io/$PROJECT_ID/envsubst'
+  - name: 'gcr.io/$_PROJECT_ID/envsubst'
     args: ['dev/crossplane/cluster-template.yml']
     
   - name: gcr.io/cloud-builders/gcloud
