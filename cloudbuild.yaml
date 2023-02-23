@@ -18,10 +18,11 @@ steps:
 #       echo "cluster created"
 #       #echo "switched.. `pwd`"
    
-   
-  - name: 'gcr.io/$_PROJECT_ID/envsubst'
+   - name: 'gcr.io/cloud-builders/gcloud'
     env:
       - 'KUBECONFIG=/workspace/.kube/config'
+   
+  - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
     args: 
     - '-c'
