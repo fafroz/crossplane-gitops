@@ -4,15 +4,25 @@
 #Create configure the Crossplane GCP Provider
 #Provision a new GKE Cluster and Node Pool using Crossplane
 
+substitutions:
+  PROJECT-ID: gitops-vittal
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    env:
-      - 'KUBECONFIG=/workspace/.kube/config'
+#   - name: 'gcr.io/cloud-builders/gcloud'
+#     env:
+#       - 'KUBECONFIG=/workspace/.kube/config'
+#     entrypoint: 'bash'
+#     args: 
+#     - '-c'
+#     - |
+#       sh dev/scripts/create_gke_cluster.sh
+#       echo "cluster created"
+#       #echo "switched.. `pwd`"
+      
+  - name: 'gcr.io/gitops-vittal/envsubst'
     entrypoint: 'bash'
     args: 
     - '-c'
     - |
-      sh dev/scripts/gcp_config.sh
       sh dev/scripts/create_gke_cluster.sh
       echo "cluster created"
       #echo "switched.. `pwd`"
