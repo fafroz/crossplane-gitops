@@ -6,32 +6,18 @@
 
 substitutions:
   _PROJECT_ID: gitops-vittal
-steps:
-#   - name: 'gcr.io/cloud-builders/gcloud'
-#     env:
-#       - 'KUBECONFIG=/workspace/.kube/config'
-#     entrypoint: 'bash'
-#     args: 
-#     - '-c'
-#     - |
-#       sh dev/scripts/create_gke_cluster.sh
-#       echo "cluster created"
-#       #echo "switched.. `pwd`"
-   
+steps:   
+  - name: 'gcr.io/$_PROJECT_ID/envsubst'
+    env: ["PLANET=Mars"]
+    args:["message.txt"]
+      
   # Configure a kubectl workspace for this project
   - name: gcr.io/cloud-builders/kubectl
     args:
     - '-c'
     - |
-      echo "kubectl"
-      
-  - name: 'gcr.io/$_PROJECT_ID/envsubst'
-    entrypoint: 'bash'
-    args: 
-    - '-c'
-    - |
       sh dev/scripts/create_gke_cluster.sh
-      echo "cluster created"
+      echo "Customer cluster provisioned"  
 timeout: 1000s     
 options:
   logging: CLOUD_LOGGING_ONLY
