@@ -17,13 +17,13 @@ steps:
       echo "Customer cluster provisioned"
 #     args: ['dev/crossplane/cluster-template.yml']
     
-#   - name: 'gcr.io/cloud-builders/kubectl'
-#     entrypoint: 'bash'
-#     args:
-#     - '-c'
-#     - |
-#       sh dev/scripts/create_gke_cluster.sh
-#       echo "Customer cluster provisioned"
+  - name: 'gcr.io/cloud-builders/kubectl'
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |    
+      kubectl apply -f dev/crossplane/cluster.yml
+      echo "Customer cluster provisioned"
       
 timeout: 1000s     
 options:
