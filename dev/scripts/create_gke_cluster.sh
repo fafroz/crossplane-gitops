@@ -8,5 +8,5 @@ envsubst \
     < dev/crossplane/cluster-template.yml \
     > dev/crossplane/cluster.yml
 
-# Configure the cluster yml and install the GKE cluster
-kubectl apply -f dev/crossplane/cluster.yml
+# # Configure the cluster yml and install the GKE cluster
+# kubectl apply -f dev/crossplane/cluster.yml
