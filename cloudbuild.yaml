@@ -10,7 +10,7 @@ steps:
       
   - name: 'gcr.io/$_PROJECT_ID/envsubst'
     entrypoint: 'bash'
-     args:
+    args:
     - '-c'
     - |
       sh dev/scripts/create_gke_cluster.sh
