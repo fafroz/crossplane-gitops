@@ -8,9 +8,9 @@
 
 3. You have an existing Kubernetes cluster up and running, since we’ll be installing Crossplane on that cluster.(We are providing script to provision host crossplane k8SCluster for the customer)
 
-4. You have the envsubst command installed on your machine. (We are providing script to push image to conatiner registry & use envsubst image)
+4. You have the envsubst command installed on your machine. (We are providing script to push image to container registry & use envsubst image)
 
-5. Helm installed , minimum version v3.0.0+  (We are providing script to push Helmimage to conatiner registry & use Helm image)
+5. Helm installed , minimum version v3.0.0+  (We are providing script to build , push Helm Image to container registry & use Helm image)
 
 
 
