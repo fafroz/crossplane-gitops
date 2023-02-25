@@ -3,7 +3,6 @@
 # Set environement variables for Google Cloud
 
 export GCP_PROJECT_ID="gitops-vittal"
-echo $GCP_PROJECT_ID
 export GCP_SERVICE_ACCOUNT_NAME="gitops-cloudbuild-gke@gitops-vittal.iam.gserviceaccount.com"
 export GCP_SERVICE_ACCOUNT_KEYFILE="gcp_service_account_keyfile"
 export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 $GCP_SERVICE_ACCOUNT_KEYFILE | tr -d "\n") # base64 encode the GCP credentials
