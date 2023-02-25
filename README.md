@@ -1,6 +1,6 @@
 # Managing infrastructure as code with Crossplane, Cloud Build, and GitOps
 
-#Pre-requisites
+# Pre-requisites
 
 1. You have an existing Google Cloud project
 
