@@ -56,7 +56,7 @@ spec:
       imageType: cos_containerd
       labels:
         test-label: crossplane-created
-      machineType: c2-standard-4
+      machineType: e2-medium
       oauthScopes:
         - "https://www.googleapis.com/auth/devstorage.read_only"
         - "https://www.googleapis.com/auth/logging.write"
@@ -64,7 +64,7 @@ spec:
         - "https://www.googleapis.com/auth/servicecontrol"
         - "https://www.googleapis.com/auth/service.management.readonly"
         - "https://www.googleapis.com/auth/trace.append"
-    initialNodeCount: 2
+    initialNodeCount: 1
     locations: 
       - ${GKE_CLUSTER_ZONE}
     management:
