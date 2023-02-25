@@ -7,7 +7,7 @@ export GCP_SERVICE_ACCOUNT_NAME="gitops-cloudbuild-gke@gitops-vittal.iam.gservic
 export GCP_SERVICE_ACCOUNT_KEYFILE="gcp_service_account_keyfile"
 export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 $GCP_SERVICE_ACCOUNT_KEYFILE | tr -d "\n") # base64 encode the GCP credentials
 
-#customer_env_var
+#customer Environment Variables
 export GKE_CLUSTER_NAME="customer-gke-k8scluster1"
 export GKE_CLUSTER_ZONE="us-central1-c"
 export GKE_NETWORK="gitops-vpc"
