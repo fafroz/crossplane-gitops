@@ -1,7 +1,6 @@
 # Managing infrastructure as code with Crossplane, Cloud Build, and GitOps
 
 #Pre-requisites
-This tutorial assumes that:
 
 You have an existing Google Cloud project
 You’ve created a Service Account in Google Cloud
