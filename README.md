@@ -6,7 +6,7 @@
 
 2. You’ve created a Service Account in Google Cloud
 
-3. You have an existing Kubernetes cluster up and running, since we’ll be installing Crossplane on that cluster.(We are providing script to provision host crossplane k8SCluster)
+3. You have an existing Kubernetes cluster up and running, since we’ll be installing Crossplane on that cluster.(We are providing script to provision host crossplane k8SCluster for the customer)
 
 4. You have the envsubst command installed on your machine. (We are providing script to push image to conatiner registry & use envsubst image)
 
