@@ -10,4 +10,4 @@
 
 4. You have the envsubst command installed on your machine. (We are providing script to push image to conatiner registry & us envsubst image)
 
-5. Helm, minimum version v3.0.0+.
+5. Helm installed , minimum version v3.0.0+  (We are providing script to push Helmimage to conatiner registry & us Helm image)
