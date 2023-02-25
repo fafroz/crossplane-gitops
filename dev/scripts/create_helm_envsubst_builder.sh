@@ -12,5 +12,3 @@ gcloud builds submit . --config=cloudbuild.yaml
 cd ../..
 # remove cloud-builders-community
 rm -rf cloud-builders-community
-
-
