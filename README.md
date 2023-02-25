@@ -2,10 +2,12 @@
 
 #Pre-requisites
 
-You have an existing Google Cloud project
+1. You have an existing Google Cloud project
 
-You’ve created a Service Account in Google Cloud
+2. You’ve created a Service Account in Google Cloud
 
-You have an existing Kubernetes cluster up and running, since we’ll be installing Crossplane on that cluster.(We are providing script to provision host crossplane k8SCluster)
+3. You have an existing Kubernetes cluster up and running, since we’ll be installing Crossplane on that cluster.(We are providing script to provision host crossplane k8SCluster)
 
-You have the envsubst command installed on your machine. (We are providing script to push image to conatiner registry & us envsubst image)
+4. You have the envsubst command installed on your machine. (We are providing script to push image to conatiner registry & us envsubst image)
+
+5. Helm, minimum version v3.0.0+.
